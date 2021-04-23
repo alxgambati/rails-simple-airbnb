@@ -1,0 +1,46 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+body {
+  background-color: white;
+}
+
+.flat-banner {
+  // display: flex;
+  // justify-content: center;
+  // background-color: black;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+.flat-container {
+  position: relative;
+  top: -50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
+
+// .share-footer {
+//    display: inline-flex;
+//     vertical-align: center;
+//     justify-content: space-between;
+// }

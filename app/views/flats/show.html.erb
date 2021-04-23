@@ -1,0 +1,55 @@
+<div class="flat-banner" style="background-image: url('<%= @flat.url %>')"></div>
+<div class="container d-flex flat-container">
+  <div class="flat-info">
+
+    <div class="card m-3 p-2 bg-light">
+      <h2><%= @flat.name %></h2>
+      <p><%= @flat.address %></p>
+    </div>
+
+    <div class="card m-3 p-2 bg-light">
+      <h3>A litte bit more about this flat...</h3>
+      <p><%= @flat.description %></p>
+    </div>
+
+    <div class="card m-3 p-2 bg-light">
+      <h3>Details</h3>
+      <div class="card-details d-flex">
+        <div class="card-details-icon m-2 align-bottom">
+          <i class="material-icons mr-2">people</i>
+          <%= @flat.number_of_guests %>
+        </div>
+        <div class="card-details-icon m-2">
+          <i class="material-icons mr-2">euro_symbol</i>
+          <%= @flat.price_per_night %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book m-3 bg-light p-3">
+    <h2>Book This Place!</h2>
+    <form>
+      <div class="form-group">
+        <label for="initial-data">From</label>
+        <input type="email" class="form-control" id="initial-data" aria-describedby="emailHelp" placeholder="01/05/2021">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">To</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="07/05/2021">
+      </div>
+      <button type="submit" class="btn btn-success btn-block my-2">Submit</button>
+    </form>
+    <div class="share-footer d-flex p-1 mt-3 justify-content-between align-text-bottom bg-light">
+      <h6 class="no-mb">Share</h6>
+      <div class="flex ">
+        <i class="fab fa-facebook-square fa-2x"></i>
+        <i class="fab fa-twitter-square fa-2x"></i>
+        <i class="fab fa-pinterest-square fa-2x"></i>
+        <i class="fab fa-whatsapp-square fa-2x"></i>
+      </div>
+    </div>
+  </div>
+
+</div>
+

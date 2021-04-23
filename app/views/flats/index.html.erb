@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>All our Flats</h1>
+  <h4>All <%= Flat.count %> Flats</h4>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+
+        <div class="flat-card shadow-sm">
+          <div class="card-body">
+
+            <div class="bg-image">
+              <img src="<%= flat.url %>" alt="" class="w-100" style="height: 200px;">
+            </div>
+
+            <div class="card-flat-title bg-light">
+              <h4><%= flat.name %></h4>
+              <p><%= flat.address %></p>
+              <div class="card-flat-conditions align-bottom bg-white">
+                <i class="material-icons mr-2">people</i>
+                  <%= flat.number_of_guests %>
+                <i class="material-icons mr-2">euro_symbol</i>
+                  <%= flat.price_per_night %>
+              </div>
+            </div>
+
+            <div class="card-flat-actions bg-white d-flex justify-content-between p-2">
+              <%= link_to 'More info', flat_path(flat) %>
+              <%= link_to 'Edit', edit_flat_path(flat),  class: "text-warning" %>
+              <%= link_to 'Delete', flat_path(flat), method: :delete, class: "text-danger" %>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
